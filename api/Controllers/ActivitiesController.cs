@@ -18,6 +18,7 @@ namespace api.Controllers
         {
             var activity = await context.Activities.FindAsync(id);
             if (activity == null) return NotFound();
+            Console.WriteLine("Completed");
 
             return activity;
         }
